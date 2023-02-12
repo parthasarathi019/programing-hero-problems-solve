@@ -531,22 +531,71 @@
               focus:outline-none
             " type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="false"
               aria-controls="collapseThree">
-              ৭. তোমাকে যদি বলে একটা while লুপ দিয়ে ৭ থেকে ১৯ পর্যন্ত যতগুলা বিজোড় সংখ্যা আছে সেগুলা দেখাতে। তুমি কি সেটা দেখাতে পারবে? পারলে সেই কোড লিখে ফেলো। 
+              ৭. তুমি একটা submit বাটন নিবে । তারপর submit বাটনটা disable করে ফেলবে। তারপর কেউ যদি উপরে input ফিল্ডে যদি একজাক্টলি email শব্দটা লিখে। তাহলে বাটন একটিভ হবে। আর যদি অন্য কিছু লিখে তাহলে বাটনটা একটিভ হবে না। এটা করে দেখাও....
               </button>
           </h2>
           <div id="collapseseven" class="accordion-collapse collapse" aria-labelledby="headingseven"
             data-bs-parent="#accordionExample">
             <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-              <span class="text-lime-500">সিম্পল একটা কোড :</span> <br> <br>
-              let num = 7; <br>
-              while (num <= 19) { <br>
-                if (num % 2 !== 0) { <br>
-                  console.log(num); <br>
-                } <br>
-                num++; <br>
-              } <br> <br>
-              <span class="text-lime-500">আউটপুট: <br>
-              7 <br> 9 <br> 11 <br> 13 <br> 15 <br> 17 <br> 19 </span>
+              <div class="bg-slate-400 mb-6 rounded-md text-[#2c2b2b] px-2 py-4 unselectable">ব্যাখ্যা : <br> 1. HTML কোড একটি ইনপুট বাটন এবং একটি সাবমিট বাটন সহ একটি ফর্ম তৈরি করে৷  <br> 2. CSS কোডটি দৃশ্যত আকর্ষণীয় দেখতে ফর্ম এবং সাবমিট বাটন টি কে স্টাইল করে। <br> 3. সাবমিট বাটন টি ডিফল্ট ভাবে ডিজেবল হিসাবে স্টার্ট হয়, তাই এটি গ্ৰে কালারের থাকে এবং ক্লিক করা যায় না। <br> 4. জাভাস্ক্রিপ্ট কোড , ইনপুট ইভেন্ট ব্যবহার করে ইনপুট ফিল্ডের পরিবর্তনগুলি ক্যাপচার করে। <br> 5. যখন ইউজার ইনপুট ফিল্ডে "email" শব্দটি ইনপুট করে, তখন সাবমিট বাটন টি এনাবল হয়ে যায় , এর ব্যাকগ্ৰাউন্ড কালার নীল হয়ে যায় এবং এটি ক্লিক_এবল হয়ে ওঠে। ইউজার যদি "email" ব্যতীত অন্য কিছু ইনপুট করে, তবে বোতামটি ডিজেবল অবস্থায় থাকে। </div>
+              <div class="flex-row  md:flex  md:justify-between space-y-7 md:space-y-0">
+                <div>
+                  </span>
+                  <span class="text-lime-600 unselectable">index.HTML</span> <br>
+                  <span><</span>!DOCTYPE html> <br>
+                  <span><</span>html lang="en"> <br>
+                  <span><</span>head> <br>
+                  <span><</span>meta charset="UTF-8"> <br>
+                  <span><</span>meta http-equiv="X-UA-Compatible" content="IE=edge"> <br>
+                  <span><</span>meta name="viewport" content="width=device-width, initial-scale=1.0"> <br>
+                  <span><</span>link rel="stylesheet" href="style.css"> <br>
+                  <span><</span>script src="https://cdn.tailwindcss.com"><span><</span>/script> <br>
+                  <span><</span>title>keyup<span><</span>/title> <br>
+                 <span><</span>/head> <br>
+                 <span><</span>body class="bg-yellow-200"> <br>
+                
+                   <span><</span>div class="form"> <br>
+                       <span><</span>input type="text" id="emailInput" class="border-2 border-black rounded-md mb-2"> <br>
+                       <span><</span>button id="submitBtn" disabled>Submit<span><</span>/button> <br>
+                     <span><</span>/div> <br>
+                    <span><</span>script src="script.js"><span><</span>/script> <br>
+                   <span><</span>/body> <br>
+                   <span><</span>/html>
+                </div>
+                <div>
+                  <span class="text-lime-600 unselectable">style.CSS</span> <br>
+                  <span class="text-[#b87f62]">.form { <br>
+                    display: flex; <br>
+                    flex-direction: column; <br>
+                    align-items: center; <br>
+                    margin-top: 50px; <br>
+                  } <br> <br>
+                  
+                  #submitBtn { <br>
+                    padding: 10px 20px; <br>
+                    background-color: lightgray; <br>
+                    border-radius: 5px; <br>
+                    cursor: not-allowed; <br>
+                  }</span>
+                </div>
+                <div>
+                  <span class="text-lime-600 unselectable">script.JS</span>  <br>
+                  <span class="text-[#f95900]">const emailInput = document.querySelector("#emailInput"); <br>
+                    const submitBtn = document.querySelector("#submitBtn"); <br> <br>
+                    
+                    emailInput.addEventListener("keyup", function () { <br>
+                      if (emailInput.value === "email") { <br>
+                        submitBtn.disabled = false; <br>
+                        submitBtn.style.backgroundColor = "blue"; <br>
+                        submitBtn.style.cursor = "pointer"; <br>
+                      } else { <br>
+                        submitBtn.disabled = true; <br>
+                        submitBtn.style.backgroundColor = "lightgray"; <br>
+                        submitBtn.style.cursor = "not-allowed"; <br>
+                      } <br>
+                    });</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -570,26 +619,48 @@
               focus:outline-none
             " type="button" data-bs-toggle="collapse" data-bs-target="#collapseeight" aria-expanded="false"
               aria-controls="collapseThree">
-              ৮. তোমাকে যদি বলা হয় তুমি একটা array ডিক্লেয়ার করবে। এবং সেটার মধ্যে কয়টা উপাদান আছে সেটা বের করবে হবে। সেই array এর এর মধ্যে চতুর্থ পজিশন এর উপাদান চেইঞ্জ করতে হবে। array এর মধ্যে দুইটা উপাদান যোগ করতে হবে। এবং একটা উপাদান কে বের করে দিতে হবে। তুমি কি সেটা করতে পারবে। 
+              ৮. কোন একটা ইমেজ এর উপরে mouseenter করলে সেই ইমেজটা চেইঞ্জ হয়ে যাবে। করতে পারবা এটা ..?
             </button>
           </h2>
           <div id="collapseeight" class="accordion-collapse collapse" aria-labelledby="headingeight"
             data-bs-parent="#accordionExample">
             <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-              এইতো অনেক সোজা 🙃... <br> <br>
-
-              let array = ["ami", "tomar", "hote", "chai" ] <span class="text-lime-500"> [Array নিলাম]</span> <br>
-              let length = array.length; <span class="text-lime-500">[length বের করার জন্য] </span><br> 
-              array[3]="chai na"; <span class="text-lime-500">[চতুর্থ পজিশনের ইলিমেন্ট চেন্জ করার জন্য]</span> <br>
-              array.push("onno", "karo", "hote","chai")  <span class="text-lime-500">[শেষে কিছু push করলাম আবার]</span> <br>
-              array.shift() <span class="text-lime-500"> [প্রথম থেকে একটা ইলিমেন্ট সরিয়ে দিলাম 🙂]</span> <br>
-              console.log(array); <br> <br>
+              <div class="bg-slate-400 mb-6 rounded-md text-[#2c2b2b] px-2 py-4 unselectable">ব্যাখ্যা : <br> 1. প্রথমেই বলে রাখি এখানে IMAGE সেকশন এ , this লেখাটা ফাংশনের প্যারামিটার হিসেবে নিলেও, এটা আসলে কোনো প্যারামিটার  না । এটা জাভাস্ক্রিপ্ট এরই একটা ইভেন্ট। প্যারামিটার হিসেবে this ছাড়া ভুলভাল অন্য কিছু নিলে কোড কাজ করবে না। <br> <br> 2. এখানে অন_মাউস_এন্টার ইভেন্টর ভিতরে বিগ_ইমেজ নামের একটা ফাংশনকে কল করা হয়েছে যেটা ইমেজের সাইজ , ডিফল্ট ইমেজের থেকে বাড়িয়ে দেয় ।   <br><br> 3. আর অন_মাউস_লিভ ইভেন্টর ভিতরে স্মল_ইমেজ নামের একটা ফাংশনকে কল করা হয়েছে যেটা ইমেজের সাইজ কে ডিফল্ট সাইজ ই রেখে দেয়।  <br><br> 4. এখন প্রশ্ন আসতে পারে ডিফল্ট সাইজ টা আসলে কি ... ? তাহলে , IMAGE সেকশন এর ভিতরে খেয়াল করে দেখো ইমেজের হাইট এবং উইথ 32px করে সেট করা আছে । এটাকেই ডিফল্ট সাইজ বলছি ... তুমি চাইলে তোমার ইচ্ছামতো কমিয়ে বাড়িয়ে নিতে পারো । </div>
+              <div class="flex-row  md:flex  md:justify-between space-y-7 md:space-y-0">
+                <div>
+                  </span>
+                  <span class="text-lime-600 unselectable">index.HTML</span> <br>
+                 <span><</span>!DOCTYPE html> <br>
+                 <span><</span>html> <br>
+                 <span><</span>body> <br><br>
+                 <span><</span>/body> <br>
+                 <span><</span>/html> <br>
+                </div>
+                <div>
+                  <span class="text-lime-600 unselectable">IMAGE</span> <br>
+                  <span class="text-[#b87f62]">
+                   <span><</span>img onmouseenter="bigImg(this)" <br> onmouseleave="normalImg(this)" <br> border="0" <br> <span class="text-[12.5px] md:text-lg"> src="https://cdn.pixabay.com/photo/2017/02/07/18/20/heart-2046689_960_720.png"</span> <br> alt="love" <br> width="32" height="32">
+                  </span>
+                </div>
+                <div>
+                  <span class="text-lime-600 unselectable">script.JS</span>  <br>
+                  <span class="text-[#f95900]">
+                    function bigImg(x) { <br>
+                      x.style.height = "64px"; <br>
+                      x.style.width = "64px"; <br>
+                    } <br> <br>
+                    
+                    function normalImg(x) { <br>
+                      x.style.height = "32px"; <br>
+                      x.style.width = "32px"; <br>
+                    }
+                    </span>
+                </div>
+              </div>
               
-              শেষ .. কি আছে জীবনে 😅
-              
-            </div>
           </div>
-        </div>
+         </div>
+       </div>
       
         <div class="accordion-item bg-white border border-gray-200">
           <h2 class="accordion-header mb-0" id="headingnine">
@@ -604,350 +675,50 @@
               px-5
               text-base text-gray-800 text-left
               bg-white
-              border-0
+              border-0 unselectable
               rounded-none
               transition
               focus:outline-none
             " type="button" data-bs-toggle="collapse" data-bs-target="#collapsenine" aria-expanded="false"
               aria-controls="collapseThree">
-              ৯. তুমি কি একটা ফর লুপ দিয়ে কোন একটা array এর সবগুলা উপাদানকে দেখাতে পারবে। সেটা রেগুলার for লুপ হোক বা for of হোক। হলে সেই স্টাইলে একটা কোড লিখে ফেলো। 
+              ৯. একটা টেক্সট বা কোনো কিছু ; ডাবল ক্লিক করলে ঐটার পিছনের কালার চেইঞ্জ হয়ে যাবে। করে দেখাও তো .......
             </button>
           </h2>
           <div id="collapsenine" class="accordion-collapse collapse" aria-labelledby="headingnine"
             data-bs-parent="#accordionExample">
             <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-             <span class="text-lime-500"> const array = [1, 2, 3, 4, 5];<br><br></span>
+              <div class="bg-slate-400 mb-6 rounded-md text-[#2c2b2b] px-2 py-4 unselectable">ব্যাখ্যা : <br> সিম্পল click & dblclick ইভেন্ট ইউজ করা হয়েছে।</div>
+              <div class="flex-row  md:flex  md:justify-between space-y-7 md:space-y-0">
+                <div>
+                  </span>
+                  <span class="text-lime-600 unselectable">index.HTML</span> <br>
+                 <span><</span>!DOCTYPE html> <br>
+                 <span><</span>html> <br>
+                 <span><</span>body> <br>
+                <span><</span>h1 id ="subscribe">HTML DOM Events (click & dblclick)<span><</span>/h1> <br>
+                 <span><</span>/body> <br>
+                 <span><</span>/html> <br>
+                </div>
+                <div>
+                  <span class="text-lime-600 unselectable">script.JS</span> <br>
+                  <span class="text-[#b87f62]">
+                    const subscribe = document.getElementById("subscribe");  <br><br>
+                    subscribe.addEventListener("dblclick", function () { <br>
+                      subscribe.style.backgroundColor = "#B6E2D3"; <br>
+                    }); <br><br>
+                    subscribe.addEventListener("click", function () { <br>
+                      subscribe.style.backgroundColor = "#fceae8"; <br>
+                    });
+                  </span>
+                </div>
+               
+              </div>
 
-              for (let i = 0; i < array.length; i++) <br>
-                let index = <br>
-                let element = array[i]<br>
-                console.log(index,element)<br><br></span>
-              <span class="text-lime-500">আউটপুট: <br>
-                1 <br> 2 <br> 3 <br> 4 <br> 5 <br> 
-            </div>
-          </div>
-        </div>
-      
-        <div class="accordion-item bg-white border border-gray-200">
-          <h2 class="accordion-header mb-0" id="headingten">
-            <button class="
-              accordion-button
-              collapsed
-              relative
-              flex
-              items-center
-              w-full
-              py-4
-              px-5
-              text-base text-gray-800 text-left
-              bg-white
-              border-0
-              rounded-none
-              transition
-              focus:outline-none
-            " type="button" data-bs-toggle="collapse" data-bs-target="#collapseten" aria-expanded="false"
-              aria-controls="collapseThree">
-              ১০. তোমাকে যদি বলা হয়। একটা array এর মধ্যে ৮০ এর চাইতে বড় সংখ্যা থাকলে সেগুলাকে console log করে দেখাতে সেটা কি তুমি পারবে? তাহলে তুমি সেই কোড করে ফেলো 
-            </button>
-          </h2>
-          <div id="collapseten" class="accordion-collapse collapse" aria-labelledby="headingten"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-              var numbers = [75, 82, 95, 60, 87]; <br> <br>
 
-              for (var i = 0; i < numbers.length; i++) { <br>
-                  let index=i; <br>
-                  let element = numbers[i] <br>
-                if (element > 80) { <br>
-                  console.log(element); <br>
-                } <br>
-              } <br> <br>
-              <span class="text-lime-500">আউটপুট: <br>
-                82 <br> 95 <br> 87 </span>
             </div>
           </div>
         </div>
-      
-        <div class="accordion-item bg-white border border-gray-200">
-          <h2 class="accordion-header mb-0" id="headingeleven">
-            <button class="
-              accordion-button
-              collapsed
-              relative
-              flex
-              items-center
-              w-full
-              py-4
-              px-5
-              text-base text-gray-800 text-left
-              bg-white
-              border-0
-              rounded-none
-              transition
-              focus:outline-none
-            " type="button" data-bs-toggle="collapse" data-bs-target="#collapseeleven" aria-expanded="false"
-              aria-controls="collapseThree">
-              ১১. তিনটা সংখ্যার গুনফল বের করে ফাইনাল রেজাল্ট আউটপুট হিসেবে রিটার্ন করতে হবে। তুমি কি সেই কোড লিখতে পারবে। যদি পারো তাহলে সেই কোড লিখে ফেলো। 
-            </button>
-          </h2>
-          <div id="collapseeleven" class="accordion-collapse collapse" aria-labelledby="headingeleven"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-             <span class="text-lime-500"> let num1=5; <br>
-              let num2=10; <br>
-              let num3=15; <br> <br> </span>
-              let multplication = num1*num2*num3; <br>
-              console.log(multplication);
-            </div>
-          </div>
-        </div>
-      
-        <div class="accordion-item bg-white border border-gray-200">
-          <h2 class="accordion-header mb-0" id="headingtwelve">
-            <button class="
-              accordion-button
-              collapsed
-              relative
-              flex
-              items-center
-              w-full
-              py-4
-              px-5
-              text-base text-gray-800 text-left
-              bg-white
-              border-0
-              rounded-none
-              transition
-              focus:outline-none
-            " type="button" data-bs-toggle="collapse" data-bs-target="#collapsetwelve" aria-expanded="false"
-              aria-controls="collapseThree">
-              ১২. একটা অবজেক্ট ডিক্লেয়ার করবে। সেটাতে তিনটা প্রপার্টি থাকবে। এবং কোন একটা প্রোপার্টি এর মান চেইঞ্জ করবা। 
-            </button>
-          </h2>
-          <div id="collapsetwelve" class="accordion-collapse collapse" aria-labelledby="headingtwelve"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-              const object = { <br>
-                prop1: 'value1', <br>
-                prop2: 'value2',    <span class="text-lime-500"> [অবজেক্ট ডিক্লেয়ার করলাম]</span>  <br>      
-                prop3: 'value3' <br>
-              }; <br> <br>
-              
-              function changeProp(prop, newValue) {  <span class="text-lime-500">[অবজেক্ট এর প্রপার্টি চেঞ্জ করার জন্য change_prop নামের ফাংশন নিলাম]</span> <br>
-                object[prop] = newValue;  <span class="text-lime-500">[এটাই আসল জিনিস..]</span> <br>
-              } <br>
-              
-              changeProp('prop2', 'newValue2'); <span class="text-lime-500">[এরপর.. যে প্রপার্টি চেন্জ করবো  এবং নতুন যে  মান সেট করতে চাই সেটাকে just ফাংশন এর প্যারামিটার হিসেবে নিবো।]</span> <br>
-              console.log(object); <br> <br>
-              [[ এটা একটু কঠিন লাগছে তাই না ... চিন্তা করো না , একসময় সব ঠিক হয়ে যাবে.. বাবা-মা একদিন না একদিন ঠিক , মেনে নেবেই 😅😅😅 । আমাদের জন্য না হলেও আমাদের বাবুটার মুখের দিকে চেয়ে অন্তত .......]]
-          </div>
-        </div> <hr>
-      
-        <div class="accordion-item bg-white border border-gray-200">
-          <h2 class="accordion-header mb-0" id="headingthirteen">
-            <button class="
-              accordion-button
-              collapsed
-              relative
-              flex
-              items-center
-              w-full
-              py-4
-              px-5
-              text-base text-gray-800 text-left
-              bg-white
-              border-0
-              rounded-none
-              transition
-              focus:outline-none
-            " type="button" data-bs-toggle="collapse" data-bs-target="#collapsethirteen" aria-expanded="false"
-              aria-controls="collapseThree">
-              ১৩. সিম্পল একটা ফাংশন লিখতে হবে। যেটার নাম হবে feetToInch এবং এই ফাংশন ইনপুট হিসেবে নিবে feet আর রিটার্ন করবে inch । অর্থাৎ এই ফাংশনকে কোন একটা ফিট বলে দিলে সে রিটার্ন হিসেবে বলে দিবে কত ইঞ্চি হয়। 
-            </button>
-          </h2>
-          <div id="collapsethirteen" class="accordion-collapse collapse" aria-labelledby="headingthirteen"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-              function feetToInch (feet) { <br>
-                const inch = feet*12; <br>
-                return inch ; <br>
-                
-                } <br>
-                
-                let valueOfFeet = 10; <br>
-                const inch = feetToInch(valueOfFeet); <br>
-                console.log(inch); 
-                
-            </div>
-          </div>
-        </div>
-      
-        <div class="accordion-item bg-white border border-gray-200">
-          <h2 class="accordion-header mb-0" id="headingfourteen">
-            <button class="
-              accordion-button
-              collapsed
-              relative
-              flex
-              items-center
-              w-full
-              py-4
-              px-5
-              text-base text-gray-800 text-left
-              bg-white
-              border-0
-              rounded-none
-              transition
-              focus:outline-none
-            " type="button" data-bs-toggle="collapse" data-bs-target="#collapsefourteen" aria-expanded="false"
-              aria-controls="collapseThree">
-              ১৪. একদম ফাংশন এর নাম হুবহু centimeterToMeter নাম দিয়ে একটা ফাংশন লিখবে। এই ফাংশনে ইনপুট হিসাবে কেউ সেন্টিমিটার দিবে আর সেই সেন্টিমিটার কে মিটার এ কনভার্ট করে রেজাল্ট রিটার্ন করবে। 
-            </button>
-          </h2>
-          <div id="collapsefourteen" class="accordion-collapse collapse" aria-labelledby="headingfourteen"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-              function centimeterToMeter (cm) { <br>
-                const meter = cm/39.37; <br>
-                return meter ; <br>
-                
-                } <br>
-                let valueOfCm = 70; <br>
-                const meter = centimeterToMeter(valueOfCm); <br>
-                console.log(meter); 
-                
-            </div>
-          </div>
-        </div>
-      
-        <div class="accordion-item bg-white border border-gray-200">
-          <h2 class="accordion-header mb-0" id="headingfifteen">
-            <button class="
-              accordion-button
-              collapsed
-              relative
-              flex
-              items-center
-              w-full
-              py-4
-              px-5
-              text-base text-gray-800 text-left
-              bg-white
-              border-0
-              rounded-none
-              transition
-              focus:outline-none
-            " type="button" data-bs-toggle="collapse" data-bs-target="#collapsefifteen" aria-expanded="false"
-              aria-controls="collapseThree">
-              ১৫.একটা ফাংশন লিখবে। যে ফাংশনের নাম হবে paperRequirements এই ফাংশনের প্যারামিটার হিসেবে তিনটা প্যারামিটার হবে। প্রথম প্যারামিটার হবে তুমি প্রথম বই কত কপি ছাপাতে চাও। সেকেন্ড প্যারামিটার হবে তুমি সেকেন্ড বই কত কপি ছাপাতে চাও। আর থার্ড প্যারামিটার হবে তুমি থার্ড বই কত কপি ছাপাতে চাও। অর্থাৎ কোন বই এর কত কপি ছাপানো হবে সেটাই প্যারামিটার হিসেবে নিবে। এইবার ভালো করে খেয়াল করো। প্রথম বই ছাপানোর জন্য পৃষ্ঠা লাগবে ১০০ টা সেকেন্ড বই ছাপানোর জন্য পৃষ্ঠা লাগবে ২০০ টা তৃতীয় বই ছাপানোর জন্য পৃষ্ঠা লাগবে ৩০০ টা এখন তোমার কাজ হচ্ছে paperRequirements নামক ফাংশন লিখে ফেলা যাতে। সেই ফাংশনকে কল করে কোন বই এর কত কপি লাগবে বলে দিবে প্যারামিটার হিসেবে। আর ফাংশন হিসাব করে বলে দিবে তোমার সর্বমোট কতপৃষ্ঠা কাগজ লাগবে। 
-            </button>
-          </h2>
-          <div id="collapsefifteen" class="accordion-collapse collapse" aria-labelledby="headingfifteen"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-              function paperRequirements(first_book_copy , second_book_copy , third_book_copy) {  <br>
-         <span class="text-lime-600">let total_page = first_book_copy*100 + second_book_copy*200+ third_book_copy*300 <br></span>                
-                console.log(total_page); <br>
-                } <br>
-                
-                paperRequirements(1 , 2 , 3); <br><br>
-
-              <span class="text-lime-600"> আউটপুট: <br> 1400 </span>
-            </div>
-          </div>
-        </div>
-      
-        <div class="accordion-item bg-white border border-gray-200">
-          <h2 class="accordion-header mb-0" id="headingsixteen">
-            <button class="
-              accordion-button
-              collapsed
-              relative
-              flex
-              items-center
-              w-full
-              py-4
-              px-5
-              text-base text-gray-800 text-left
-              bg-white
-              border-0
-              rounded-none
-              transition
-              focus:outline-none
-            " type="button" data-bs-toggle="collapse" data-bs-target="#collapsesixteen" aria-expanded="false"
-              aria-controls="collapseThree">
-              ১৬.একটা ফাংশন লিখবে। এই ফাংশনের নাম হবে bestFriend তারপর সেই ফাংশনে ইনপুট প্যারামিটার হিসেবে একটা array নিবে। সেই array এর মধ্যে তোমার সব ফ্রেন্ডের নাম থাকবে। এখন তোমার কাজ হচ্ছে যে ফ্রেন্ড এর নাম সবচেয়ে বড় সেই ফ্রেন্ড এর নাম রিটার্ন করে দেয়া। এই ক্ষেত্রে তুমি নামটা অর্থাৎ ফ্রেন্ডের নাম (স্ট্রিং) রিটার্ন করতে হবে। 
-            </button>
-          </h2>
-          <div id="collapsesixteen" class="accordion-collapse collapse" aria-labelledby="headingsixteen"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-              <span class="text-lime-500">//Find Largest String JS</span> <br><br>
-              function findLargestString(arr) { <br>
-                let largestString = arr[0]; <br>
-                for (let i = 1; i < arr.length; i++) { <br>
-                  if (arr[i].length > largestString.length) { <br>
-                    largestString = arr[i]; <br>
-                  } <br>
-                } <br>
-                return largestString; <br>
-              } <br> <br>
-              
-              <span class="text-lime-500">let strings = ['Hello', 'World', 'Welcome', 'to', 'JavaScript']; <br>
-                let largest = findLargestString(strings); <br>
-                console.log(largest);</span>
-            </div>
-          </div>
-        </div>
-      
-        <div class="accordion-item bg-white border border-gray-200">
-          <h2 class="accordion-header mb-0" id="headingseventeen">
-            <button class="
-              accordion-button
-              collapsed
-              relative
-              flex
-              items-center
-              w-full
-              py-4
-              px-5
-              text-base text-gray-800 text-left
-              bg-white
-              border-0
-              rounded-none
-              transition
-              focus:outline-none
-            " type="button" data-bs-toggle="collapse" data-bs-target="#collapseseventeen" aria-expanded="false"
-              aria-controls="collapseThree">
-              ১৭.এইটা একটু ট্রিকি হতে পারে। একটা array এর মধ্যে অনেকগুলা সংখ্যা থাকবে। তোমার কাজ হচ্ছে সংখ্যা গুলা একটার পর একটা করে চেক করা। এবং সংখ্যা গুলা যদি পজিটিভ সংখ্যা হয়। অর্থাৎ শূন্য বা শূন্যের চাইতে বড় হয় তাহলে সেগুলাকে কোন একটা array এর মধ্যে রাখবে। আর যদি নেগেটিভ সংখ্যা হয়। তাহলে লুপটা স্টপ করে দিবে। এবং লুপ বন্ধ করার আগ পর্যন্ত যতগুলা পজিটিভ সংখ্যা পাওয়া গেছে। সেগুলা রিটার্ন করে দিবে। 
-            </button>
-          </h2>
-          <div id="collapseseventeen" class="accordion-collapse collapse" aria-labelledby="headingseventeen"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-          <span class="text-lime-500">//JS Positive Numbers Array</span> <br><br>
-
-          function getPositiveNumbers(numbers) { <br>
-            const positiveNumbers = []; <br>
-            for (let i = 0; i < numbers.length; i++) { <br>
-              if (numbers[i] >= 0) { <br>
-                positiveNumbers.push(numbers[i]); <br>
-              } else { <br>
-                break; <br>
-              } <br>
-            } <br>
-            console.log(positiveNumbers); <br>
-            return positiveNumbers; <br>
-          } <br> <br>
-          
-          <span class="text-lime-500">const numbers = [1, 2, 3, -4, 5, 6]; <br>
-            const result = getPositiveNumbers(numbers); <br>
-            console.log(result);</span>
-          
-            </div>
-          </div>
-        </div>
-      
+            
         <div class="accordion-item bg-white border border-gray-200">
           <h2 class="accordion-header mb-0" id="headingeighteen">
             <button class="
@@ -1000,34 +771,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 <script src = "index.js"></script>
-</body>
-</html>
-
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-
-<style>
-.button { font-size: 16px; padding: 10px; text-align: center; background-color: rgb(95 80 254); color: white; border: solid 1px #a6d8a8; margin: auto; }
-#show_and_hide { display: block; padding: 20px; text-align: center; background-color: #f902ee; }
-</style>
-
-</head>
-<body>
-<p class="button" onclick="hideFunction()">Click to hide panel</p> 
-<p class="button" onclick="showFunction()">Click to show panel</p> 
-<p id="show_and_hide"> Panel hide and show</p> 
-<script>
-function hideFunction() {
-document.getElementById("show_and_hide").style.display = "none"; 
-}
-function showFunction() {
-document.getElementById("show_and_hide").style.display = "block"; 
-}
-</script>
 </body>
 </html>
