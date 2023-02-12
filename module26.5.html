@@ -497,11 +497,11 @@
                
               <span class="text-lime-500"><span><</span>script> <br>
               function hideFunction() { <br>
-                document.getElementById("show_and_hide").style.display = "none";   <span class="text-blue-600 unselectable"> [হাইড করার কোড]</span> <br>
+                <span class="text-[13.4px] md:text-xl">document.getElementById("show_and_hide").style.display = "none";</span>   <span class="text-blue-600 unselectable"> [হাইড করার কোড]</span> <br>
               } <br>
               
               function showFunction() { <br>
-                document.getElementById("show_and_hide").style.display = "block";  <span class="text-blue-600 unselectable"> [শো করার কোড]</span>  <br>
+                <span class="text-[13.4px] md:text-xl">document.getElementById("show_and_hide").style.display = "block";</span>  <span class="text-blue-600 unselectable"> [শো করার কোড]</span>  <br>
               } <br>
              <span><</span>/script></span> <br>
                
@@ -1000,5 +1000,34 @@
 
 <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 <script src = "index.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.button { font-size: 16px; padding: 10px; text-align: center; background-color: rgb(95 80 254); color: white; border: solid 1px #a6d8a8; margin: auto; }
+#show_and_hide { display: block; padding: 20px; text-align: center; background-color: #f902ee; }
+</style>
+
+</head>
+<body>
+<p class="button" onclick="hideFunction()">Click to hide panel</p> 
+<p class="button" onclick="showFunction()">Click to show panel</p> 
+<p id="show_and_hide"> Panel hide and show</p> 
+<script>
+function hideFunction() {
+document.getElementById("show_and_hide").style.display = "none"; 
+}
+function showFunction() {
+document.getElementById("show_and_hide").style.display = "block"; 
+}
+</script>
 </body>
 </html>
