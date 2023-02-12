@@ -12,6 +12,15 @@
     
 
     <title>Solve_X</title>
+    <style>
+        .unselectable {
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    </style>
 </head>
 <body>
 <header>
@@ -66,7 +75,7 @@
   <!-- Left links -->
   <ul class="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
     <li class="nav-item p-2">
-      <a class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="#">Module 23.5</a>
+      <a class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="index.html">Module 23.5</a>
     </li>
     <li class="nav-item p-2">
       <a class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="#">Module 19.5</a>
@@ -75,7 +84,7 @@
       <a class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="#">Module 21.5</a>
     </li>
     <li class="nav-item p-2">
-      <a class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="module26.5.html">Module 26.5</a>
+      <a class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="">Module 26.5</a>
     </li>
   </ul>
   <!-- Left links -->
@@ -255,7 +264,8 @@
 
 </header>
 
-<p class="text-center text-2xl md:text-4xl font-bold text-[#ffc107] my-3 "> Module 23.5 problem solutions</p>
+<p class="text-center text-2xl md:text-4xl font-bold text-[#ffc107] my-3 unselectable "> Module 26.5 problem solutions</p>
+<div class=" border-rose-800 border-8 border-double shadow-lg rounded-xl md:rounded-full mr-24 ml-24 mb-4"><p class="text-center text-[11px] md:text-xl font-bold text-[#ff1671] my-3 unselectable ">এই মডিউলের প্রবলেম সলভিং এ যাওয়ার আগে কিছু কথা বলে নেই ...  <br> এই মডিউলের আউটপুট গুলো যেহেতু ডম রিলেটেড <br> তাই , এগুলা <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_inner_html" target="_blank">w3schools.com</a> এর অনলাইন কম্পাইলারে পেষ্ট করে আউটপুট দেখতে পারেন।    <br> ••ধন্যবাদ সবাইকে ••</p></div>
 
 
 <section class="">
@@ -277,21 +287,23 @@
               rounded-none
               transition
               focus:outline-none
+              unselectable
             " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
               aria-controls="collapseOne">
-              ১. তোমাকে যদি বলি একটা স্ট্রিং টাইপের ভেরিয়েবল লিখো। একটা বুলিয়ান টাইপের ভেরিয়েবল লিখো বা একটা নাম্বার টাইপের ভেরিয়েবল লিখো। সেটা কি তুমি লিখতে পারবে?
+              ১. নতুন একটা স্ক্রিপ্ট ফাইল খুলে সেটাকে কি তুমি ••index.html•• এই ফাইলের সাথে কানেক্ট করাতে পারবে?
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
             data-bs-parent="#accordionExample">
             <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-              হ্যা ... পারি তো 🙂.... এই যে দেখো ..... <br> let str = "I Love You A Lot" <span class="text-lime-400">[এটা স্ট্রিং টাইপের ডেটা]</span> <br> let iLoveYou = true  <span class="text-lime-400">[এটা বুলিয়ান টাইপের ডেটা]</span> <br> let num = 69  <span class="text-lime-400">[এটা নাম্বার টাইপের ডেটা]</span>
+             <span class="unselectable"> হ্যা ... পারব তো 🙂.... এই যে দেখো .....</span> <br><span><</span>script src="FileName.js"></script>  <span class="text-lime-400 unselectable">[এইতো , এভাবে করতে হয়] </span>
             </div>
           </div>
         </div>
         <div class="accordion-item bg-white border border-gray-200">
           <h2 class="accordion-header mb-0" id="headingTwo">
             <button class="
+              unselectable
               accordion-button
               collapsed
               relative
@@ -308,26 +320,17 @@
               focus:outline-none
             " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
               aria-controls="collapseTwo">
-              ২. তুমি কি জানো কখন let দিয়ে ভেরিয়েবল লিখতে হয়ে আর কখন const দিয়ে ভেরিয়েবল লিখতে হয়। যদি লিখতে পারো তাহলে লিখে ফেলো। এবং যেই যেটা দিয়ে ভেরিয়েবল লিখলে আবার সেটা চেইঞ্জ করা যায়। তাহলে যেটা দিয়ে ভেরিয়েবল ডিক্লেয়ার করলে চেইঞ্জ করা যায়। সেটার মান চেইঞ্জ করে নাও । অর্থাৎ জাস্ট দুইটা ভেরিয়েবল ডিক্লেয়ার করবে let এবং const দিয়ে। তারপর যেকোন একটার ভ্যালু চেইঞ্জ করবে।
+              ২. ধরো , একটা ওয়েবসাইটে যতগুলা ইলিমেন্টে h2 ট্যাগ আছে সেগুলাকে সিলেক্ট করে তার লেখাগুলার কালার Hot-Pink করে দিতে হবে। করতে পারবা তুমি এটা ?
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample">
             <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-              বাবু ; Var , Let এবং Const দিয়ে ভ্যারিএবল ডিক্লেয়ার করার কিছু রুলস আছে ... <br>
-              শোনো তাহলে‌ , Var দিয়ে তুমি ভ্যারিএবল ডিক্লেয়ার করলে সেটাকে পরবর্তীতে আবার , Var সহ এসাইন করতে পারবা ... এরকম.. <br> <br>
-
-             <span class="text-lime-500"> Var bolo = "Ami Tomay Vlobashi 🙂" <br>
-              Var abar_bolo = "Bolchi Ami Tomay onek Vlobashi 🙂" <br> <br> </span>
-              
-              এভাবে .….. বুঝছো এবার ..? <br>
-              
-              আর এটাই  let দিয়ে করলে কিন্তু এভাবে করতে হতো ... <br> <br>
-
-              <span class="text-lime-500"> let bolo = "Ami Tomay Vlobashi 🙂 " <br>
-              abar_bolo = " Bolchi Ami Tomay onek Vlobashi 🙂" </span> মানে‌ second বার আবার let বলতে পারতা না। <br> <br>
-              
-              আর Const দিয়ে করলে তো তুমি আমাকে দ্বিতীয়বার “ ভালোবাসি “ বলার সুযোগ টাই পাইতা না 😅😅
+               <span class="text-[#ffcf00] text-right font-bold unselectable">change h2 element color</span> <br><br>
+                  const h2collection = document.getElementsByTagName("h2");  <span class="text-lime-500 unselectable">[.getElementsByTagName(" ") দিয়ে সবগুলো h2 ট্যাগ কে সিলেক্ট করলাম .] </span><br>
+                  for (let i = 0; i < h2collection.length; i++) { <span class="text-lime-500 unselectable">[যে কয়টা ট্যাগ আছে সেই পর্যন্ত for loop চালিয়ে .....] </span> <br>
+                    h2collection[i].style.color = "#f6007b"; <span class="text-lime-500 unselectable">[প্রত্যেকটাকে কালার করলাম] </span> <br>
+                  }
             </div>
           </div>
         </div>
@@ -339,7 +342,7 @@
               relative
               flex
               items-center
-              w-full
+              w-full unselectable
               py-4
               px-5
               text-base text-gray-800 text-left
@@ -350,37 +353,17 @@
               focus:outline-none
             " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
               aria-controls="collapseThree">
-              ৩. দুইটা ভেরিয়েবল এর মধ্যে যোগ, বিয়োগ, গুণ, ভাগ কিভাবে করতে হয় সেটা কি জানো। অর্থাৎ তুমি কি +, -, *, /, %এইগুলার ব্যবহার জানো। তাহলে নাম্বার টাইপের দুইটা ভেরিয়েবল লিখো তারপর তাদের যোগ করে সেটার মান আরেকটা ভেরিয়েবল এ রাখো। একইভাবে ওই দুইটা ভেরিয়েবল এর মধ্যে বিয়োগ, গুন, ভাগ এবং ভাগশেষ বের করো। 
+              ৩. ধরো একটা ওয়েবসাইটে #BlackPink আইডি দিয়ে একটা সেকশন আছে। সেই সেকশনের ব্যাকগ্রাউন্ড কালার tomato করে দিতে পারবে তুমি?
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
             data-bs-parent="#accordionExample">
             <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-              Hmm জানি তো 🌸.. ওয়েট, আগে দুইটা ভ্যারিএবল ডিক্লেয়ার করে নেই , তারপর দেখাচ্ছি ..... <br>
-             <span class="text-lime-500"> let first_number = 6 ; <br>
-              let second _number = 9 ; <br> <br></span>
-              
-              যোগ করার সময় :  <br>
-            <span class="text-lime-500">  let sum = first_number + second _number; <br>
-              console.log (sum); <br> <br></span>
-              
-              বিয়োগ করার সময় : <br>
-            <span class="text-lime-500">  let difference = first_number - second _number; <br>
-              console.log (difference); <br> <br></span>
-              
-              গুন করার সময় : <br>
-            <span class="text-lime-500">  let multiplication = first_number*second _number; <br>
-              console.log (multiplication); <br> <br></span>
-              
-              ভাগ করার সময় : <br>
-             <span class="text-lime-500"> let divide = first_number / second _number; <br>
-              console.log (divide); <br> <br> </span>
-             
-              ভাগশেষ বের  করার সময় : <br>
-             <span class="text-lime-500"> let percentage = first_number % second _number; <br>
-              console.log (percentage); <br> <br></span>
-              
-              এইভাবে করতে হয় , বুঝতে পারছো তুমি 🙂..?
+              <span class="text-[#ffcf00] text-right font-bold unselectable">#BlackPink id baackgroundColor Change</span> <br><br>
+              const backpack = document.getElementById("backpack"); <br>
+              backpack.style.boxSizing = "borderBox"; <br>
+              backpack.style.borderRadius = "5px"; <br>
+              backpack.style.backgroundColor = "#B6E2D3";
             </div>
           </div>
         </div>
@@ -393,7 +376,7 @@
               relative
               flex
               items-center
-              w-full
+              w-full unselectable
               py-4
               px-5
               text-base text-gray-800 text-left
@@ -404,42 +387,17 @@
               focus:outline-none
             " type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false"
               aria-controls="collapseThree">
-              ৪. তুমি কি দুইটা ভেরিয়েবল এরমধ্যে তুলনা করতে পারো। কম্পারিজন করতে পারো। যে দুইটা ভেরিয়েবল এর মধ্যে প্রথমটা সেকেন্ডটা এর চাইতে ছোট, বড়, অসমান, সমান , ছোট বা সমান, বড় বা সমান। এইগুলা চেক করতে পারো। অর্থাৎ <, >, ==, !=, <=, >= চিহ্নগুলা ব্যবহার করতে পারো। তাহলে দুইটা সংখ্যা টাইপের ভেরিয়েবল ডিক্লেয়ার করে তাদেরকে এই ছয়ভাবে তুলনা করে কোড লিখে ফেলো। 
+              ৪.ধরো , একটা ওয়েবসাইটে .card ক্লাস যতগুলা জায়গায় ইউজ করা হয়েছে সবগুলা কার্ড এর বর্ডার রেডিয়াস ৩০px করে দিতে হবে ... পারবে তুমি.?
             </button>
           </h2>
           <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour"
             data-bs-parent="#accordionExample">
             <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-              Hmm জানি তো 🌸.. ওয়েট, আগে দুইটা ভ্যারিএবল ডিক্লেয়ার করে নেই , তারপর দেখাচ্ছি ..... <br>
-              <span class="text-lime-500">let first_number = 6 ; <br>
-                let second _number = 9 ; <br> <br></span>
-              
-              প্রথম ক্ষেত্রে: <br>
-              <span class="text-lime-500">let who_is_big = first_number < second _number <br>
-                console.log (who_is_big); <br>  <br></span>
-              
-              দ্বিতীয় ক্ষেত্রে : <br>
-              <span class="text-lime-500">let who_is_small= first_number > second _number <br>
-                console.log (who_is_small); <br> <br> </span>
-              
-              তৃতীয় ক্ষেত্রে : <br>
-              <span class="text-lime-500">let‌ equal = first_number==second _number <br>
-                console.log (equal); <br> <br></span> 
-              
-              চতুর্থ ক্ষেত্রে : <br>
-             <span class="text-lime-500"> let is_not_equal = first_number !== second _number <br>
-              console.log (is_not_equal); <br> <br></span> 
-              
-              পঞ্চম ক্ষেত্রে: <br>
-              <span class="text-lime-500">let big_or_equal= first_number <=second _number <br>
-                console.log (big_or_equal); <br> <br> </span>
-              
-              ষষ্ঠ ক্ষেত্রে: <br>
-             <span class="text-lime-500"> let small_or_equal= first_number >=second _number <br>
-              console.log (small_or_equal); <br> <br> </span>
-              
-              
-              এইভাবে করবা এগুলা , বুঝতে পারছো তুমি 🙂..? আবার আমাদের ভালোবাসার মধ্যেও এসব comparison কইরো না 😅😄
+              <span class="text-[#ffcf00] text-right font-bold unselectable">.card borderRadius chnage</span> <br><br>
+              const cards = document.getElementsByClassName("card");  <span class="text-lime-500 unselectable">[.getElementsByClassName(" ") দিয়ে সবগুলো card ক্লাস কে সিলেক্ট করলাম .] </span> <br>
+              for (let card of cards) {  <span class="text-lime-500 unselectable"> [যে কয়টা ট্যাগ আছে সেই পর্যন্ত for of লুপ চালিয়ে .....]</span> <br>
+                card.style.borderRadius = "30px";  <span class="text-lime-500 unselectable">[বর্ডার রেডিয়াস ৩০px করে দিলাম] </span> <br>
+              }
             </div>
           </div>
         </div>
@@ -450,7 +408,7 @@
               accordion-button
               collapsed
               relative
-              flex
+              flex unselectable
               items-center
               w-full
               py-4
@@ -463,24 +421,19 @@
               focus:outline-none
             " type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false"
               aria-controls="collapseThree">
-              ৫. তোমার যদি দুইটা শর্ত পূরণ করতে বলে। এবং দুইটা শর্তের মধ্যে দুইটাই পূরণ করতে হবে। তাহলে তুমি কি সেটা চেক করতে পারবে? একইভাবে যদি বলে তুমি দুইটা শর্তের যেকোন একটা পূরণ করতে পারবে। অর্থাৎ তুমি && এবং || এর ব্যবহার করতে পারো কিনা। যদি পারো তাহলে নিজে নিজে এই রকমের কোড লিখে ফেলো। 
+              ৫.তোমাকে যদি বলি  কোনো একটা ফাংশন লিখে সেটার ভিতরে কনসোল.লগ করতে হবে। এবং সেই ফাংশন টা ক্লিক হ্যান্ডলার (Onclick) হিসেবে কোন একটা বাটনে যোগ করো.. তুমি কি সেটা করতে পারবে .?
             </button>
           </h2>
           <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfive"
             data-bs-parent="#accordionExample">
             <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-              Hmm পারবো ... আমি সব পারি ... না পারলে আমার এই ছোট্ট বাবু_টাহ্ কে বুঝিয়ে দেবে কে .. তাই ,,,,পারতে হয় সব .... দেখো .. এভাবে করবা বুঝছো ... <br> <br>
+              <span class="text-[#ffcf00] text-right font-bold unselectable">console.log function using Onclick = ""</span> <br><br>
+              function print() {  <br>
+                console.log("print() function is working"); <br>
+              } <br> <br>
+              <span class="unselectable">•••HTML এর ভিতর এইটুকু লিখবা••• <br></span>
+              <span><</span>button onclick="print()"><a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onclick" target="_blank"><span class="text-[#ffcf00]">Click me</span></a><span><</span>/button>
 
-              প্রথমে দুইটা ভ্যারিএবল ডিক্লেয়ার করে নেই... তারপর বাকি কাজ ....  <br>
-              
-            <span class="text-lime-500">let onek_love_korba= true; <br>
-              let onek_caring_korba=true; <br>
-              let all_time_pase_thakba=true; <br> <br></span>
-              
-              <span class="text-lime-600">if(onek_love_korba = true && onek_caring_korba = true && all_time_pase_thakba=true)</span><br>{ console.log (“আসো আমরা এই প্রেমের একটা পরিনতি দেই ... চলো বিয়ে করে ফেলি 😌😌”)} <br> <br>
-              
-              <span class="text-lime-600">if(onek_love_korba = true || onek_caring_korba = true || all_time_pase_thakba=false) </span><br> { console.log (“ আমার কিছু সময় লাগবে ভাবতে .... তারপর তোমাকে জানাব”)} <br> <br>
-               [At a glance : <span class="text-lime-500"> && মানে সবগুলো শর্ত সত্যি হওয়া লাগবে , আর || মানে যেকোনো একটা সত্যি হলেই হবে ]</span>
             </div>
           </div>
         </div>
@@ -493,7 +446,7 @@
               collapsed
               relative
               flex
-              items-center
+              items-center unselectable
               w-full
               py-4
               px-5
@@ -505,18 +458,55 @@
               focus:outline-none
             " type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false"
               aria-controls="collapseThree">
-              ৬. তুমি কি একটা শর্ত পালন করলে একটা কিছু করবে। শর্ত পূরণ না করলে অন্য কিছু একটা করবে এমন কোড লিখতে পারবে। অর্থাৎ তুমি কি if-else এর কোড লিখতে পারবে। পারলে একটা কোড লিখে ফেলো 
+              ৬. তোমাকে যদি কোনো একটা ওয়েবসাইটের সবগুলা buy now বাটনে এমন একটা ইভেন্ট হ্যান্ডলার যোগ করতে বলা হয় যাতে যেকোন একটা buy now বাটনে চাপ দিলে card টা ওয়েবসাইট থেকে রিমুভ হয়ে যায়। আবার ফিরে আসবে । তাহলে কি তুমি সেটা করতে পারবে ?
             </button>
           </h2>
           <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingsix"
             data-bs-parent="#accordionExample">
             <div class="accordion-body py-4 px-5 text-[#f6007b] text-xl">
-              বেশি একটা বকবক করতে ইচ্ছে করছে না । এমনিতেই তোমাকে বুঝতে বুঝতে আমি ক্লান্ত .. .. কোড লিখে দিচ্ছি..  পড়ে একটু বুঝে নেয়ার ট্রাই করো : <br><br>
-              <span class="text-lime-500"> let onek_love_korba= true; <br>
-              let onek_caring_korba=true; <br>
-              let all_time_pase_thakba=true; <br> <br></span>
+              <span class="text-[#ffcf00] text-right font-bold unselectable">••Full Code••</span> <br><br>
+              <span><</span>!DOCTYPE html> <br>
+              <span><</span>html> <br>
+              <span><</span>head> <br> <br>
+              <span><</span>style> <br>
+               <span class="text-lg">.button {
+                font-size: 16px;
+                padding: 10px;
+                text-align: center;
+                background-color: rgb(95 80 254); 
+                color: white;
+                border: solid 1px #a6d8a8;
+                margin: auto;
+              } <br></span>
+               
+               <span class="text-lg">#show_and_hide { 
+                <span class="text-lime-500">display: block;</span>
+                padding: 20px;
+                text-align: center;
+                background-color: #f902ee;
+                } <br></span>
+                 
+              <span><</span>/style> <br> <br> 
+              <span><</span>/head> <br>
+              <span><</span>body> <br>
+               
+              <span class="text-blue-600"><span><</span>p class="button" onclick="hideFunction()">Click to hide panel<span><</span>/p> <span class="text-lime-500 unselectable"> [হাইড করার বাটন]</span> </span> <br>
+              <span><</span>p class="button" onclick="showFunction()">Click to show panel<span><</span>/p>  <span class="text-lime-500 unselectable"> [শো করার বাটন]</span>  <br>
+              <span><</span>p id="show_and_hide"> Panel hide and show<span><</span>/p>  <span class="text-lime-500 unselectable"> [প্যানেল]</span> </span> <br>
+               
+               
+              <span class="text-lime-500"><span><</span>script> <br>
+              function hideFunction() { <br>
+                document.getElementById("show_and_hide").style.display = "none";   <span class="text-blue-600 unselectable"> [হাইড করার কোড]</span> <br>
+              } <br>
               
-             <span class="text-lime-500"> if(onek_love_korba = true && onek_caring_korba = true && all_time_pase_thakba=true) </span><br> { console.log (“আসো আমরা এই প্রেমের একটা পরিনতি দেই ... চলো বিয়ে করে ফেলি 😌😌”)} <span class="text-lime-500"> else</span> <br>{ console.log (" তোমার সাথে ব্রেকাপ . এইটুকু চাওয়া যে পূরন করতে না পারে , তার সাথে পুরোটা জীবন কাটাবো , কি করে !!! " );
+              function showFunction() { <br>
+                document.getElementById("show_and_hide").style.display = "block";  <span class="text-blue-600 unselectable"> [শো করার কোড]</span>  <br>
+              } <br>
+             <span><</span>/script></span> <br>
+               
+              <span><</span>/body> <br>
+              <span><</span>/html>
             </div>
           </div>
         </div>
@@ -530,7 +520,7 @@
               relative
               flex
               items-center
-              w-full
+              w-full unselectable
               py-4
               px-5
               text-base text-gray-800 text-left
@@ -572,7 +562,7 @@
               w-full
               py-4
               px-5
-              text-base text-gray-800 text-left
+              text-base text-gray-800 text-left unselectable
               bg-white
               border-0
               rounded-none
